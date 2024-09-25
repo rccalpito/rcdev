@@ -1,0 +1,108 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.sql
+
+# Local environment settings
+.env
+*.local
+*.envrc
+
+# Django migrations
+*/migrations/*
+!*/migrations/__init__.py
+
+# Static and media files (collected files)
+staticfiles/
+media/
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Vite specific (or other frontend tools)
+frontend/node_modules/
+frontend/.vite/
+frontend/dist/
+frontend/.cache/
+frontend/.eslintcache
+frontend/.yarn/
+
+# Venv or virtualenvs (if you use these)
+env/
+venv/
+ENV/
+.venv/
+.ENV/
+
+# Python virtual environments (Conda or venv)
+*.swp
+*.swo
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# PyCharm specific
+.idea/
+*.iml
+
+# VSCode specific
+.vscode/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# pytest specific
+.cache/
+.pytest_cache/
+
+#​⬤
