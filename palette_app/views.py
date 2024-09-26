@@ -6,6 +6,7 @@ import os
 import cv2
 from sklearn.cluster import KMeans
 import numpy as np
+from pathlib import Path
 
 def load_image(image_path):
     # Load image using OpenCV
@@ -31,8 +32,7 @@ def palette_view(request):
             filename = fs.save(image.name, image)
             file_url = fs.url(filename)
 
-            # Load and process the image
-            image_path = os.path.join(settings.MEDIA_ROOT, filename)
+            image_path = Path(__file__).joinpath(settings.MEDIA_ROOT).joinpath(filename)
             image_rgb = load_image(image_path)
 
             # Generate dominant colors
@@ -46,7 +46,7 @@ def palette_view(request):
 
             # Save the palette image
             palette_filename = 'palette_' + filename
-            palette_path = os.path.join(settings.MEDIA_ROOT, palette_filename)
+            palette_path = Path(__file__).joinpath(settings.MEDIA_ROOT).joinpath(settings.MEDIA_ROOT)
             cv2.imwrite(palette_path, cv2.cvtColor(palette, cv2.COLOR_RGB2BGR))
 
             return render(request, 'palette_app/result.html', {
