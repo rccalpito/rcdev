@@ -1,10 +1,11 @@
 import './App.css'
+import HeroLayout from './layouts/hero/hero'
 
-function App() {
+const App = () => {
 
   return (
     <>
-      <h1>THIS IS THE START TO SOMETHING BEAUTIFUL</h1>
+      <HeroLayout />
     </>
   )
 }
