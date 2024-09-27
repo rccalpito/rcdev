@@ -1,9 +1,10 @@
+from pathlib import Path
 from backend.config.base import BASE_DIR
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR, "html"],
+        "DIRS": [BASE_DIR / "backend" / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

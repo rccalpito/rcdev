@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import palette_view
+from .views import generate_common_colors
 
 urlpatterns = [
-    path('', palette_view, name='palette_view'),
+    path('', generate_common_colors, name='generate_common_colors'),
 ]
