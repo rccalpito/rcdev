@@ -18,4 +18,4 @@ def generate_common_colors(request):
             print(f'dominant colors: {dominant_colors}')
     else: form = ImageUploadForm()
 
-    return render(request, 'palette_app/upload.html', {'form': form})
+    return dominant_colors
