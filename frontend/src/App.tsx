@@ -1,11 +1,15 @@
 import './App.css'
-import HeroLayout from './layouts/hero/hero'
+// import ImageComponent from './layouts/hero/hero';
+import ImageComponent from './components/image/ImageComponent'
+import SubmitComponent from './components/image/SubmitComponent'
 
 const App = () => {
 
   return (
     <>
-      <HeroLayout />
+      <ImageComponent
+        placeholder='hello'
+      />
     </>
   )
 }
