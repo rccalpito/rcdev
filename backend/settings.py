@@ -14,3 +14,15 @@ from backend.config.development import *
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 ROOT_URLCONF = "backend.urls"
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+]
+
+CORS_ALLOW_METHODS = ['POST']
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:5173',  # Frontend origin
+]
