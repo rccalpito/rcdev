@@ -7,7 +7,7 @@ from .services.computer_vision.load_image import load_image
 from .services.math.get_dominant_colors import get_dominant_colors
 from django.http import JsonResponse
 
-# @csrf_exempt
+@csrf_exempt
 
 def generate_common_colors(request):
     if request.method == 'POST':
