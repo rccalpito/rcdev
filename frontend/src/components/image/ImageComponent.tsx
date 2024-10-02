@@ -43,7 +43,7 @@ const ImageComponent: FunctionComponent<ImageComponentProps> = ({
     formData.append('image', file)
 
     try {
-      const response = await axios.post('http://localhost:8000/api/color-palette', formData, {
+      const response = await axios.post('http://localhost:8000/api/color-palette/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
