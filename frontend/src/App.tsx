@@ -1,10 +1,15 @@
 import './App.css'
+// import ImageComponent from './layouts/hero/hero';
+import ImageComponent from './components/image/ImageComponent'
+import SubmitComponent from './components/image/SubmitComponent'
 
-function App() {
+const App = () => {
 
   return (
     <>
-      <h1>THIS IS THE START TO SOMETHING BEAUTIFUL</h1>
+      <ImageComponent
+        placeholder='hello'
+      />
     </>
   )
 }

@@ -1,4 +1,3 @@
-from pathlib import Path
 from backend.config.base import BASE_DIR
 
 TEMPLATES = [
