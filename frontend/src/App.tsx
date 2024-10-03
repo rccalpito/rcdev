@@ -1,15 +1,16 @@
 import './App.css'
-// import ImageComponent from './layouts/hero/hero';
 import ImageComponent from './components/image/ImageComponent'
-import SubmitComponent from './components/image/SubmitComponent'
+import VideoComponent from './components/video/VideoComponent'
 
 const App = () => {
-
+  
   return (
     <>
-      <ImageComponent
+      {/* <ImageComponent
         placeholder='hello'
-      />
+      /> */}
+      <VideoComponent />
+
     </>
   )
 }
