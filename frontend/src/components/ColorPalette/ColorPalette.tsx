@@ -5,9 +5,7 @@ interface ColorPaletteProps {
 }
 
 const ColorPalette: FunctionComponent<ColorPaletteProps> = ({ colorList }) => {
-  // Helper function to convert RGB to HSL
   const rgbToHsl = (r: number, g: number, b: number) => {
-    // Convert RGB values to the range [0, 1]
     r /= 255; g /= 255; b /= 255;
 
     const max = Math.max(r, g, b);
@@ -35,27 +33,20 @@ const ColorPalette: FunctionComponent<ColorPaletteProps> = ({ colorList }) => {
     return { h, s, l };
   };
 
-  // Helper function to convert RGB to RGBA string
   const rgba = (r: number, g: number, b: number, a: number) => `rgba(${r}, ${g}, ${b}, ${a})`;
 
-  // Map colors to include HSL values
   const colorData = colorList?.centroids?.map((color) => {
     const [r, g, b] = color;
     const hsl = rgbToHsl(r, g, b);
     return { color, hsl };
   });
 
-  // Sort the colors based on HSL values
   const sortedColors = colorData?.sort((a, b) => {
-    // Sort by hue
     return a.hsl.l - b.hsl.l;
     if (a.hsl.s !== b.hsl.s) return a.hsl.s - b.hsl.s;
     if (a.hsl.h !== b.hsl.h) return a.hsl.h - b.hsl.h;
-    // Then by saturation
-    // Then by lightness
   });
 
-  // Render the sorted color swatches
   const swatch = sortedColors?.map((item, index) =>
     <div
       key={index}
