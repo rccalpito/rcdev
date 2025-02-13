@@ -8,7 +8,7 @@ export default defineConfig({
   base: process.env.NODE_ENV === 'development' ? '/' : '/static/frontend/',
   build: {
     manifest: true,
-    outDir: resolve(__dirname, 'frontend/.vite'),
+    outDir: '../dist',
     rollupOptions: {
       input: './src/main.tsx',
     },
@@ -18,5 +18,5 @@ export default defineConfig({
     hmr: {
       host: 'localhost',
     },
-  },
+  } : undefined,
 });
