@@ -3,13 +3,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  publicDir: './public',
-  base: process.env.NODE_ENV === 'development' ? '/' : '/static/frontend/',
+  publicDir: 'public',
+  base: '/',
   build: {
     manifest: true,
     outDir: 'dist',
     rollupOptions: {
-      input: './src/main.tsx',
+      input: 'src/main.tsx',
     },
   },
   server: command === 'serve' ? {
