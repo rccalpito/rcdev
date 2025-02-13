@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => ({
     manifest: true,
     outDir: 'dist',
     rollupOptions: {
-      input: 'src/main.tsx',
+      input: 'index.html',
     },
   },
   server: command === 'serve' ? {
