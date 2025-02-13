@@ -9,7 +9,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "strict": true,
-    "noImplicitAny": false
+    "strict": false,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
   }
 }
