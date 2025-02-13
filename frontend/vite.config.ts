@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
   publicDir: './public',
   base: process.env.NODE_ENV === 'development' ? '/' : '/static/frontend/',
@@ -13,10 +12,10 @@ export default defineConfig({
       input: './src/main.tsx',
     },
   },
-  server: {
+  server: command === 'serve' ? {
     port: 5173,
     hmr: {
       host: 'localhost',
     },
   } : undefined,
-});
+}));
