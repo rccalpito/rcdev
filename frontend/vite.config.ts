@@ -7,7 +7,7 @@ export default defineConfig(({ command }) => ({
   base: process.env.NODE_ENV === 'development' ? '/' : '/static/frontend/',
   build: {
     manifest: true,
-    outDir: '../dist',
+    outDir: 'dist',
     rollupOptions: {
       input: './src/main.tsx',
     },
